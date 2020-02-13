@@ -10,12 +10,11 @@
 @import "_sidebar"
 @import "_offline-menu"
 @import "_team"
-@import "_partners"
 @import "_style-guide"
 @import "_modal"
 @import "_scrimba"
 @import "_vue-mastery"
-@import "_themes"
+@import "_themes-example"
 
 #header
   box-shadow: 0 0 1px rgba(0,0,0,.25)
@@ -23,7 +22,7 @@
 
 .content
   position: relative
-  padding: $content-padding-vertical 0
+  padding: 2.2em 0
   max-width: 700px
   margin: 0 auto
   padding-left: 50px
@@ -55,7 +54,7 @@
     display: inline-block
     vertical-align: middle
     width: 280px
-    margin-left: 20px
+    margin-right: 20px
   h1
     margin: 0 0 1em
   h2, h3
@@ -81,9 +80,9 @@
       content: "#"
       color: $green
       position: absolute
-      left: -0.7em
+      right: -0.7em
       margin-top: -0.05em
-      padding-right: 0.5em
+      padding-left: 0.5em
       font-size: 1.2em
       line-height: 1
       font-weight: bold
@@ -97,7 +96,7 @@
     margin: 1.2em 0 -1.2em
     padding-bottom: 1.2em
     position: relative
-    z-index: $z-base
+    z-index: 1
   ul, ol
     padding-left: 1.5em
     // FIX: Some link click targets are covered without this
@@ -111,8 +110,8 @@
     font-weight: 600
   blockquote
     margin: 2em 0
-    padding-left: 20px
-    border-left: 4px solid $green
+    padding-right: 20px
+    border-right: 4px solid $green
     p
       font-weight: 600
       margin-left: 0
@@ -139,12 +138,14 @@
       background-color: #f8f8f8
       code
         background-color: #efefef
+        text-align: left
+        direction: ltr
   p
     &.tip, &.success
       padding: 12px 24px 12px 30px
       margin: 2em 0
-      border-left-width: 4px
-      border-left-style: solid
+      border-right-width: 4px
+      border-right-style: solid
       background-color: $codebg
       position: relative
       border-bottom-right-radius: $radius
@@ -152,7 +153,7 @@
       &:before
         position: absolute
         top: 14px
-        left: -12px
+        right: -12px
         color: #fff
         width: 20px
         height: 20px
@@ -167,12 +168,12 @@
       em
         color: $medium
     &.tip
-      border-left-color: $red
+      border-right-color: $red
       &:before
         content: "!"
         background-color: $red
     &.success
-      border-left-color: $green
+      border-right-color: $green
       &:before
         content: "\f00c"
         font-family: FontAwesome
@@ -182,6 +183,10 @@
   margin-top: 2em
   height: 1em
 
+/* just for display the table in ltr  */
+.installation-guide
+  table
+    direction: ltr;
 .footer
   color: $light
   margin-top: 2em
@@ -201,12 +206,12 @@
   .content.with-sidebar
     margin-left: 290px
   #ad
-    z-index: $z-base
+    z-index: 1
     position: relative
     padding: 0
     bottom: 0
-    right: 0
-    float: right
+    left: 0
+    float: left
     padding: 0 0 20px 30px
 
 @media screen and (max-width: 900px)

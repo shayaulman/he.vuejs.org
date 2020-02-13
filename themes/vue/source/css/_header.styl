@@ -15,7 +15,7 @@ red-dot-before(leftPos = -8px)
   height: $header-height
   padding: $heading-padding-vertical 60px
   position: relative
-  z-index: $z-header
+  z-index: 100
 
 body.docs
   #header
@@ -30,7 +30,7 @@ body.docs
   margin: 0
   padding: 0
   position: absolute
-  right: 30px
+  left: 80px
   top: $heading-padding-vertical
   height: $header-height
   line-height: $header-height
@@ -41,12 +41,8 @@ body.docs
     position: relative
     margin: 0 .6em
 
-  .nav-dropdown-container
-    padding-right: .8em
-    &:last-child
-      padding-right: 0
-
   .nav-dropdown
+    text-align: right
     .nav-link
       &:hover, &.current
         border-bottom: none
@@ -70,6 +66,8 @@ body.docs
   white-space: nowrap
   &:hover, &.current
     border-bottom: 3px solid $green
+  &.team
+    margin-left: 10px
   &.new::before
     red-dot-before()
 
@@ -96,7 +94,7 @@ body.docs
   color: $dark
   outline: none
   border-radius: 15px
-  margin-right: 10px
+  margin-left: 10%
   transition: border-color .2s ease
   background: #fff url(../images/search.png) 8px 5px no-repeat
   background-size: 20px
@@ -111,9 +109,11 @@ body.docs
   color: $dark
   font-family: $logo-font
   font-weight: 500
+  position: absolute
+  left: 80%
   img
     vertical-align: middle
-    margin-right: 6px
+    margin-left: 6px
     width: $header-height
     height: $header-height
 
@@ -124,7 +124,7 @@ body.docs
   width: 100%
   height: 40px
   background-color: #fff
-  z-index: $z-header
+  z-index: 9
   display: none
   box-shadow: 0 0 2px rgba(0,0,0,.25)
   .menu-button

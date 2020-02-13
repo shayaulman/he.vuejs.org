@@ -41,6 +41,8 @@ code
   margin: 0 2px
   border-radius: 2px
   white-space: nowrap
+  text-align: left
+  direction: ltr
 
 em
   color: $light
@@ -63,7 +65,7 @@ input.button
     text-indent: 1.4em;
     > svg
       position: absolute
-      left: 0.4em
+      right: 0.4em
       top: 0.4em
       width: 2em
   &.white
@@ -76,10 +78,12 @@ input.button
 
 #main
   position: relative
-  z-index: $z-base
+  z-index: 1
   padding: 0 60px 30px
   overflow-x: hidden
-
+  text-align: right
+  direction: rtl
+  
 #nav
   .nav-link
     cursor: pointer
@@ -90,6 +94,8 @@ input.button
     &:hover
       .nav-dropdown
         display: block
+    &.language, &.ecosystem
+      margin-left: 20px
     .arrow
       pointer-events: none
   .nav-dropdown
@@ -99,7 +105,7 @@ input.button
     overflow-y: auto
     position: absolute
     top: 100%
-    right: -15px
+    left: -20px
     background-color: #fff
     padding: 10px 0
     border: 1px solid #ddd

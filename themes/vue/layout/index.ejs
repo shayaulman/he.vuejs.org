@@ -18,9 +18,9 @@
       <p>
         <a id="modal-player" class="button has-icon" href="javascript:;">
           <%- partial('icons/play') %>
-          WHY VUE.JS?</a>
-        <a class="button white" href="<%- url_for("/v2/guide/") %>">GET STARTED</a>
-        <a class="button gray has-icon" href="https://github.com/vuejs/vue" target="_blank" rel="noopener">
+          למה VUE.JS?</a>
+        <a class="button white" href="<%- url_for("/v2/guide/") %>">התחל כעת</a>
+        <a class="button gray has-icon" href="https://github.com/vuejs/vue" target="_blank">
           <%- partial('icons/github-dark') %>
           GITHUB</a>
       </p>
@@ -28,10 +28,10 @@
   </div>
 </div>
 
-<div id="special">
-  <h3>Special Sponsor</h3>
+<div id="special-sponsor">
+  <h3>ספונסר מיוחד</h3>
   <% var specialSponsor = theme.special_sponsors[0]; %>
-  <a href="<%- specialSponsor.url %>" target="_blank" rel="noopener sponsored">
+  <a href="<%- specialSponsor.url %>" target="_blank">
     <img src="<%- url_for(`/images/${specialSponsor.img}`) %>" style="width:160px" alt="Code.xyz Logo">
     <br>
     <span><%- specialSponsor.description %></span>
@@ -41,21 +41,21 @@
 <div id="highlights">
   <div class="inner">
     <div class="point">
-      <h2>Approachable</h2>
-      <p>Already know HTML, CSS and JavaScript? Read the guide and start building things in no time!</p>
+      <h2>נגיש</h2>
+      <p>יודע כבר HTML, CSS ו-JavaScript? קרא את המדריך והתחל לבנות תוך אפס זמן!</p>
     </div>
 
     <div class="point">
-      <h2>Versatile</h2>
-      <p>An incrementally adoptable ecosystem that scales between a library and a full-featured framework.</p>
+      <h2>מגוון</h2>
+      <p>מערכת אקולוגית שניתן לאמץ אותה, המאוזן בין ספרייה למסגרת מלאה.</p>
     </div>
 
     <div class="point">
-      <h2>Performant</h2>
+      <h2>ביצוע</h2>
       <p>
-        20KB min+gzip Runtime<br>
-        Blazing Fast Virtual DOM<br>
-        Minimal Optimization Efforts
+        20KB min+gzip בזמן ריצה<br>
+        Virtual DOM מהיר ביותר<br>
+        מאמצי אופטימיזציה מינימליים
       </p>
     </div>
   </div>
@@ -69,13 +69,12 @@
 
 <div id="news">
   <div class="inner">
-    <h3><label for="member_email">Subscribe to our Weekly Newsletter</label></h3>
+    <h3><label for="member_email">הירשמו לניוזלטר השבועי שלנו</label></h3>
     <form
       class="newsletter-form"
       id="revue-form"
       name="revue-form"
       target="_blank"
-      rel="noopener"
       action="https://www.getrevue.co/profile/vuenewsletter/add_subscriber"
       method="post"
       @submit="subscribe"
@@ -86,66 +85,42 @@
         name="member[email]"
         id="member_email"
         required
-        placeholder="Email address"
+        placeholder="כתובת אימייל"
       >
       <input
         class="button newsletter-button"
         type="submit"
-        value="Subscribe"
+        value="הירשם"
         name="member[subscribe]"
         id="member_submit"
       >
     </form>
     <p>
-      You can read the previous issues and listen to our podcast at <a href="https://news.vuejs.org" target="_blank" rel="noopener">news.vuejs.org</a>.
+      תוכלו לקרוא את הגיליונות הקודמים ולהאזין לפודקאסט שלנו ב-<a href="https://news.vuejs.org" target="_blank" rel="noopener">news.vuejs.org</a>.
     </p>
   </div>
 </div>
 
 <div id="footer">
   <p>
-    <a class="social-icon" href="https://github.com/vuejs/vue" target="_blank" rel="noopener">
+    <a class="social-icon" href="https://github.com/vuejs/vue" target="_blank">
       <%- partial('icons/github') %>
     </a>
-    <a class="social-icon" href="https://twitter.com/vuejs" target="_blank" rel="noopener">
+    <a class="social-icon" href="https://twitter.com/vuejs" target="_blank">
       <%- partial('icons/twitter') %>
     </a>
-    <a class="social-icon" href="https://medium.com/the-vue-point" target="_blank" rel="noopener">
+    <a class="social-icon" href="https://medium.com/the-vue-point" target="_blank">
       <%- partial('icons/medium') %>
     </a>
   </p>
   <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a><br>
-  Copyright &copy; 2014-<%- new Date().getFullYear() %> Evan You</p>
+    Copyright &copy; 2014-<%- new Date().getFullYear() %> Evan You</p>
 </div>
 
 <div id="video-modal" class="modal">
-  <div class="video-space" style="padding: 56.25% 0 0 0; position: relative;">
-    <iframe
-      src="https://player.vimeo.com/video/247494684?dnt=1"
-      style="height: 100%; left: 0; position: absolute; top: 0; width: 100%;"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen></iframe>
-  </div>
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <p class="modal-text">
-    Video by
-    <a
-      href="https://www.vuemastery.com"
-      target="_blank"
-      rel="sponsored noopener"
-      title="Vue.js Courses on Vue Mastery">
-        Vue Mastery
-    </a>. Watch Vue Mastery’s free
-    <a
-      href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/"
-      target="_blank"
-      rel="sponsored noopener"
-      title="Vue.js Courses on Vue Mastery"
-    >
-      Intro to Vue course
-    </a>.
+  <div class="video-space" style="padding: 56.25% 0 0 0; position: relative;"><iframe src="https://player.vimeo.com/video/247494684" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div><script src="https://player.vimeo.com/api/player.js"></script>
+  <p class="modal-text">Video by <a href="https://www.vuemastery.com" target="_blank" rel="noopener" title="Vue.js Courses on Vue Mastery">Vue Mastery</a>. Watch Vue Mastery’s free <a href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/" target="_blank" rel="noopener" title="Vue.js Courses on Vue Mastery">Intro to Vue course</a>.
   </p>
 </div>
 

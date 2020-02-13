@@ -2,9 +2,9 @@
 <% var isThemes = page.path === 'resources/themes.html' %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" direction="rtl">
   <head>
-    <title><%- page.title ? page.title + ' â€” ' : '' %>Vue.js</title>
+    <title><%- page.title ? page.title + ' — ' : '' %>Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="<%- theme.site_description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,12 +19,12 @@
     <link rel="alternate" hreflang="es" href="https://es.vuejs.org/<%- page.path %>">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="<%- page.title ? page.title + ' â€” ' : '' %>Vue.js">
+    <meta property="og:title" content="<%- page.title ? page.title + ' — ' : '' %>Vue.js">
     <meta property="og:description" content="<%- theme.site_description %>">
     <meta property="og:image" content="https://<%- theme.root_domain %>/<%- url_for("/images/logo.png") %>">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="<%- page.title ? page.title + ' â€” ' : '' %>Vue.js">
+    <meta name="twitter:title" content="<%- page.title ? page.title + ' — ' : '' %>Vue.js">
     <meta name="twitter:description" content="<%- theme.site_description %>">
     <meta name="twitter:image" content="https://<%- theme.root_domain %>/images/logo.png">
 
@@ -81,7 +81,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
       ga('create', '<%- theme.google_analytics %>', '<%- theme.root_domain %>');
       ga('send', 'pageview');
     </script>
