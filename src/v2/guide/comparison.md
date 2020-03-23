@@ -1,42 +1,41 @@
 ---
-title: Comparison with Other Frameworks
+title: השוואה לפריימוורקים אחרים
 type: guide
 order: 801
 ---
 
-This is definitely the most difficult page in the guide to write, but we do feel it's important. Odds are, you've had problems you tried to solve and you've used another library to solve them. You're here because you want to know if Vue can solve your specific problems better. That's what we hope to answer for you.
+זה ללא ספק העמוד הקשה לכתיבה ביותר במדריך הזה, אך אנו מרגישים שהוא חשוב. הסיכויים הם שהיו לך בעיות שניסית לפתור והשתמשת בספריה אחרת כדי לפתור אותן. אתה כאן כי אתה רוצה לדעת אם Vue יכול לפתור את הבעיות הספציפיות שלך טוב יותר. זה מה שאנחנו מקווים לענות עבורך.
 
-We also try very hard to avoid bias. As the core team, we obviously like Vue a lot. There are some problems we think it solves better than anything else out there. If we didn't believe that, we wouldn't be working on it. We do want to be fair and accurate though. Where other libraries offer significant advantages, such as React's vast ecosystem of alternative renderers or Knockout's browser support back to IE6, we try to list these as well.
+אנו משתדלים מאוד להימנע מהטיה. כצוות הליבה, ברור שאנחנו אוהבים את Vue מאוד. יש כמה בעיות שלדעתנו זה פותר טוב יותר מהאחרים. אם לא היינו מאמינים בכך, לא היינו עובדים על זה. אנחנו כן רוצים להיות הוגנים ומדויקים. במקום בו ספריות אחרות מציעות יתרונות משמעותיים, כמו מערכת האקולוגית העצומה של ריאקט שמעניקים רינדור אלטרנטיבי או תמיכה בדפדפן בחזרה ל- IE6, אנו מנסים לפרט גם אלה.
 
-We'd also like **your** help keeping this document up-to-date because the JavaScript world moves fast! If you notice an inaccuracy or something that doesn't seem quite right, please let us know by [opening an issue](https://github.com/vuejs/vuejs.org/issues/new?title=Inaccuracy+in+comparisons+guide).
+אנו גם מבקשים **ממך** לעזור לנו לשמור על מסמך זה מעודכן מכיוון שעולם ה- JavaScript נע במהירות! אם אתה מבחין בחוסר דיוק או במשהו שלא נראה בסדר, אנא הודע לנו על ידי [פתיחת issue](https://github.com/vuejs/vuejs.org/issues/new?title=Inaccuracy+in+comparisons+guide).
 
 ## React
 
-React and Vue share many similarities. They both:
+React ו-Vue חולקים קווי דמיון רבים. שניהם:
 
-- utilize a virtual DOM
-- provide reactive and composable view components
-- maintain focus in the core library, with concerns such as routing and global state management handled by companion libraries
+- משתמשים ב- DOM וירטואלי
+-  מספקים קומפוננטות תגובתיים הניתנים להרכבה
+-  ההתמקדות העיקרית היא על ספריית הליבה, ודברים כמו ראוטינג וניהול state (מצב) גלובלי מטופלים על ידי ספריות לוויה
 
-Being so similar in scope, we've put more time into fine-tuning this comparison than any other. We want to ensure not only technical accuracy, but also balance. We point out where React outshines Vue, for example in the richness of their ecosystem and abundance of their custom renderers.
+בהיותנו כה דומים, הקדשנו זמן רב יותר לכוונון ההשוואה הזאת יותר משל האחרים. אנו רוצים להבטיח לא רק דיוק טכני, אלא גם איזון. אנו מציינים היכן ש-React זוהר יותר מ-Vue, למשל בעושר של המערכת האקולוגית שלהם ובשפע של יכולת הרינדור בהתאמה אישית.
 
-With that said, it's inevitable that the comparison would appear biased towards Vue to some React users, as many of the subjects explored are to some extent subjective. We acknowledge the existence of varying technical taste, and this comparison primarily aims to outline the reasons why Vue could potentially be a better fit if your preferences happen to coincide with ours.
+עם זאת, בלתי נמנע כי ההשוואה תיראה כמוטה כלפי Vue לחלק מהמשתמשים ב- React, מכיוון שרבים מהנושאים שנחקרו הם סובייקטיביים במידה מסוימת. אנו מכירים בקיומו של טעם טכני משתנה, והשוואה זו נועדה בעיקר לשרטט את הסיבות לכך ש- Vue יכול להיות מתאים יותר אם ההעדפות שלך יוצאות בד בבד עם שלנו.
 
-Some of the sections below may also be slightly outdated due to recent updates in React 16+, and we are planning to work with the React community to revamp this section in the near future.
+חלק מהקטעים שלהלן עשויים להיות מיושנים גם בגלל העדכונים האחרונים ב-+React 16, ואנו מתכננים לעבוד עם קהילת React כדי לשפץ את החלק הזה בעתיד הקרוב.
 
-### Runtime Performance
+### ביצועי זמן ריצה
 
-Both React and Vue are exceptionally and similarly fast, so speed is unlikely to be a deciding factor in choosing between them. For specific metrics though, check out this [3rd party benchmark](https://stefankrause.net/js-frameworks-benchmark8/table.html), which focuses on raw render/update performance with very simple component trees.
+הן React והן Vue מהירים בצורה יוצאת דופן ובאותה מידה, כך שסביר להניח כי המהירות אינו הגורם המכריע בבחירה ביניהם. עם זאת, עבור מדדים ספציפיים, בדוק [תבחיני צד שלישי](https://stefankrause.net/js-frameworks-benchmark8/table.html), המתמקדים ברינדור גלם/עדכון של ביצועים עם עצי קומפוננטות פשוטים מאוד.
 
-#### Optimization Efforts
+#### מאמצי אופטימיזציה
 
-In React, when a component's state changes, it triggers the re-render of the entire component sub-tree, starting at that component as root. To avoid unnecessary re-renders of child components, you need to either use `PureComponent` or implement `shouldComponentUpdate` whenever you can. You may also need to use immutable data structures to make your state changes more optimization-friendly. However, in certain cases you may not be able to rely on such optimizations because `PureComponent/shouldComponentUpdate` assumes the entire sub tree's render output is determined by the props of the current component. If that is not the case, then such optimizations may lead to inconsistent DOM state.
+ב-React, כאשר state של קומפוננטה משתנה, זה גורם לרינדור מחדש  של כל התת-עץ של הקומפוננטה החל מהקומפוננטה הזאת כשורש. כדי להימנע מביצוע מחדש מיותר של קומפוננטות ילדים, עליך להשתמש ב`PureComponent` או ליישם `shouldComponentUpdate` בכל הזדמנות שאתה יכול. יתכן שתצטרך להשתמש במבני נתונים בלתי ניתנים להחלפה (immutable) -כדי להפוך את שינויי הstate שלך לידידותיים יותר. עם זאת, במקרים מסוימים יתכן שלא תוכל להסתמך על אופטימיזציות כאלה מכיוון ש`PureComponent / shouldComponentUpdate` מניח כי תפוקת העיבוד של כל תת העץ נקבעת על ידי הprops של הקומפוננטה  הנוכחית. אם זה לא המקרה, אופטימיזציות כאלה עשויות להוביל למצב של DOM לא עקבי.
 
-In Vue, a component's dependencies are automatically tracked during its render, so the system knows precisely which components actually need to re-render when state changes. Each component can be considered to have `shouldComponentUpdate` automatically implemented for you, without the nested component caveats.
+ב-Vue יש מעקב אחרי התלות של קומפוננטה באופן אוטומטי במהלך העיבוד שלו, כך שהמערכת יודעת במדויק אילו קומפוננטות באמת צריכים לרנדר מחדש כאשר המצב משתנה. ניתן לראות בכל קומפוננטה `shouldComponentUpdate` מופעל אוטומטית עבורך ,ללא בעיות כשמגיע לקומפוננטות מקוננים.
+בסך הכל זה מסיר את הצורך של מחלקה שלמה של אופטימיזציות ביצועים מהצלחת של המפתח ומאפשר להם להתמקד יותר בבניית האפליקציה עצמה בזמן שהיא גדילה.
 
-Overall this removes the need for a whole class of performance optimizations from the developer's plate, and allows them to focus more on building the app itself as it scales.
-
-### HTML & CSS
+### HTML ו-CSS
 
 In React, everything is just JavaScript. Not only are HTML structures expressed via JSX, the recent trends also tend to put CSS management inside JavaScript as well. This approach has its own benefits, but also comes with various trade-offs that may not seem worthwhile for every developer.
 
